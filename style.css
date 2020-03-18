@@ -1,0 +1,20 @@
+root {
+    --green-light: #a3dfc8;
+    --green: #66caa3;
+    --green-dark: #006940;
+}
+
+body {
+    background-color: var(--green-light)!important; 
+    height: 100rem;
+    color: var(--green-dark) !important;
+}
+
+.nav-item {color: red !important;}
+.container {
+    background-color: var(--green-light); 
+}
+
+.logo {
+    height: 4rem;
+}

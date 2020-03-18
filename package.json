@@ -1,0 +1,16 @@
+{
+  "name": "fkz",
+  "version": "1.0.0",
+  "description": "fkz.rs",
+  "main": "index.js",
+  "scripts": {
+    "server": "live-server --open=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Vlajkoni@bitbucket.org/Vlajkoni/fkz.git"
+  },
+  "author": "vlada030@gmail.com",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Vlajkoni/fkz#readme"
+}
