@@ -1,20 +1,23 @@
-root {
+:root {
     --green-light: #a3dfc8;
     --green: #66caa3;
-    --green-dark: #006940;
+    --green-dark: rgb(0, 105, 64);
 }
 
 body {
-    background-color: var(--green-light)!important; 
+    background-color: rgba(0, 105, 64, .6)!important; 
     height: 100rem;
     color: var(--green-dark) !important;
 }
 
-.nav-item {color: red !important;}
-.container {
-    background-color: var(--green-light); 
+.logo-1 {
+    height: 4rem;
 }
 
-.logo {
-    height: 4rem;
+.logo-2 {
+    max-height: 3.2rem;
+}
+.lang-icon {
+    height: 2rem;
+
 }
