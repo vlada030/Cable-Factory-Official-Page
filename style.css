@@ -2,12 +2,20 @@
     --green-light: #a3dfc8;
     --green: #66caa3;
     --green-dark: rgb(0, 105, 64);
+
+    --orange-light: #ffc888;
+    --orange: #ffa944;
+    --orange-dark: #ff8a00;
+}
+
+::selection {
+    color: var(--orange)!important;
 }
 
 body {
     background-color: rgba(0, 105, 64, .6)!important; 
-    height: 100rem;
-    color: var(--green-dark) !important;
+    height: 5rem;
+    color: var(--orange) !important;
 }
 
 .logo-1 {
@@ -20,4 +28,8 @@ body {
 .lang-icon {
     height: 2rem;
 
+}
+
+footer p {
+    font-size: .8rem;
 }
