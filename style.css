@@ -27,7 +27,13 @@ body {
 }
 .lang-icon {
     height: 2rem;
+}
 
+.lang-icon--active {
+    /* outline: .1rem solid var(--orange); */
+    border: 0.05rem solid black ;
+    border-radius: 50%;
+    box-shadow: 0 0 .2rem .25rem var(--orange)
 }
 
 footer p {
