@@ -247,6 +247,9 @@
 			};
 
 			// suport for css 3d transforms and css transitions
+			// ovo mogu da prespojim, da ne treba dodatni modernizr.js koji proverava
+			// da li browser podrzavava transitions, ako ne, imamo obican slideShow
+			// this.support = true;
 			this.support = Modernizr.csstransitions && Modernizr.csstransforms3d;
 			
 			// current image index
@@ -287,7 +290,7 @@
 			});
 
 		},
-		_validate			: function( options ) {
+		_validate : function( options ) {
 
 			if( this.options.cuboidsCount < 0 ){
 

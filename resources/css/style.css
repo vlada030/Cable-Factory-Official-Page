@@ -1,0 +1,238 @@
+:root {
+    --green-light: #a3dfc8;
+    --green: #66caa3;
+    --green-dark: rgb(0, 105, 64);
+
+    --orange-light: #ffc888;
+    --orange: #ffa944;
+    --orange-dark: #ff8a00;
+}
+
+::selection {
+    color: var(--orange)!important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color:  rgba(255, 255, 255, 0.5);
+    /* color: var(--green-dark)!important; */
+    background-color: rgba(0, 105, 64, .6)!important; 
+}
+
+
+@media screen and (max-width: 768px) {
+    #myCollapse {
+        border-top: 2px solid var(--orange-light);
+        margin-top: .75rem;
+        padding-top: .5rem;
+    }
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px var(--orange);
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+
+    }
+}
+
+.logo-1 {
+    height: 4rem;
+}
+
+.logo-2 {
+    max-height: 3.2rem;
+}
+.lang-icon {
+    height: 2rem;
+}
+
+.lang-icon--active {
+    /* outline: .1rem solid var(--orange); */
+    border: 0.05rem solid black ;
+    border-radius: 50%;
+    box-shadow: 0 0 .2rem .25rem var(--orange-dark)
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+
+
+/* index.html */
+
+#locations #map {
+    width: 100%;
+    height: 30rem;
+}
+
+/* proba */
+
+/* .proba {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--orange-dark);
+    text-decoration: none !important;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.proba:hover {
+    color: var(--orange) !important;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+.proba span {
+    position: absolute;
+    display: block;
+}
+
+.proba span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.proba:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.proba span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.proba:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+.proba span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.proba:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+.proba span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.proba:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+} */
+
+/* #myCollapse a {
+    text-decoration: none;
+} */
+
+.hover-effect {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--orange-dark);
+    text-decoration: none !important;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.hover-effect:hover {
+    color: var(--orange-light) !important;
+    /* background: var(--orange-light);
+    box-shadow: 0 0 10px var(--orange-light), 0 0 40px var(--orange-light), 0 0 80px var(--orange-light); */
+    transition-delay: 1s;
+}
+
+.hover-effect--active {
+    color: var(--orange-dark) !important;
+}
+
+.hover-effect span {
+    position: absolute;
+    display: block;
+}
+
+.hover-effect span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--orange-light));
+}
+
+.hover-effect:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.hover-effect span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--orange-light));
+}
+
+.hover-effect:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+.hover-effect span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--orange-light));
+}
+
+.hover-effect:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+.hover-effect span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, var(--orange-light));
+}
+
+.hover-effect:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+}
