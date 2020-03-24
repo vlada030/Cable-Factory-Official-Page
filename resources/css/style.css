@@ -67,12 +67,12 @@ footer p {
     font-size: .8rem;
 }
 
-footer a {
+.link-format {
     color: var(--orange-light);
     transition: .2s;
 }
 
-footer a:hover {
+.link-format:hover {
     text-decoration: none;
     color: var(--orange-dark);
 }
@@ -253,8 +253,20 @@ footer a:hover {
 #products #heading,
 #products a {
     background-color: var(--green-dark) !important;
+    
 }
 
 #products .card-body {
     background-color: var(--green-light);
+}
+
+#products .btn-outline-orange {
+    color: var(--orange-light);
+    border-color: var(--orange-light);
+}
+
+#products .btn-outline-orange:hover {
+    color: var(--orange-dark);
+    border-color: var(--orange-dark);
+    box-shadow: 0px 0px 20px var(--orange-light);
 }

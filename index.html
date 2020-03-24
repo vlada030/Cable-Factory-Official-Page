@@ -28,7 +28,7 @@
     <script src="/resources/sliceBox/js/modernizr-custom-200320.js"></script> 
 
     <link rel="stylesheet" href="/resources/css/hamburger.css">
-    <script defer>
+    <script>
         // hamburger button
         $(document).ready(function () {
             $('.hamburger').click(function () {
@@ -38,6 +38,23 @@
         
         // year
         $(document).ready(function() { $('#year').text((new Date).getFullYear())});
+
+        $(function(){
+$('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    e.preventDefault();
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(400, function(){
+    	$('.dropdown').removeClass('open');
+      	$('.dropdown').find('.dropdown-toggle').attr('aria-expanded','false');
+    });
+    
+  });
+});
+        
     </script>
 
     <meta name="Description" content="FABRIKA KABLOVA ZAJEČAR D.O.O. je deo multinacionalne kompanije TELE-FONIKA Kable i bavi se proizvodnjom širokog asortimana kablova">
@@ -113,7 +130,7 @@
                             PROIZVODI
                         </a>
                     </li>
-                    <li class="nav-item px-1 px-lg-2">
+                    <!-- <li class="nav-item px-1 px-lg-2">
                         <a href="resources/localization/sr/certificates.html" class="nav-link d-flex flex-md-column flex-lg-row align-items-center hover-effect">
                             <span></span>
                             <span></span>
@@ -122,6 +139,33 @@
                             <i class="fas fa-file-alt mr-3 mr-md-0 mr-lg-2"></i> 
                             SERTIFIKATI  
                         </a>
+                    </li> -->
+                    <li class="nav-item px-1 px-lg-2 dropdown">
+                        <a href="#" class="nav-link d-flex flex-md-column flex-lg-row align-items-center dropdown-toggle hover-effect" data-toggle="dropdown">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fas fa-user mr-3 mr-md-0 mr-lg-2"></i>
+                            SERTIFIKATI
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="resources/localization/sr/certificates_potvrde.html" class="dropdown-item">
+                                <i class="fas fa-user-circle mr-3 mr-md-0 mr-lg-2"></i> Potvrde o usaglašenosti
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="resources/localization/sr/certificates_ino.html" class="dropdown-item">
+                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> VDE sertifikati
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="resources/localization/sr/certificates_dop.html" class="dropdown-item">
+                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> Protiv-Požarni sertifikati (DoP)
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="resources/localization/sr/certificates_qs.html" class="dropdown-item">
+                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> ISO Sistem kvaliteta
+                            </a>
+                        </div>                   
                     </li>
                     <li class="nav-item px-1 px-lg-2 dropdown">
                         <a href="#" class="nav-link d-flex flex-md-column flex-lg-row align-items-center dropdown-toggle hover-effect" data-toggle="dropdown">
@@ -298,7 +342,7 @@
                 <p class="col">19000&nbsp;Zaječar&nbsp;ul.&nbsp;Negotinski&nbsp;put&nbsp;B.B. tel.:&nbsp;+381&nbsp;(0)19&nbsp;444&nbsp;333</p>
                 <p class="col">
                     e-mail:
-                    <a href="mailto:office.fkz@tfkable.com">office.fkz@tfkable.com</a>
+                    <a href="mailto:office.fkz@tfkable.com" class="link-format">office.fkz@tfkable.com</a>
                 </p>                
 
             </div>
