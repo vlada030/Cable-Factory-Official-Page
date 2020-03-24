@@ -270,3 +270,10 @@ footer p {
     border-color: var(--orange-dark);
     box-shadow: 0px 0px 20px var(--orange-light);
 }
+
+/* certificates.html */
+
+#list-provodnici-list, 
+#list-kablovi-list {
+    background-color: var(--green);
+}

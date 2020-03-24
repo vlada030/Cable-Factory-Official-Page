@@ -28,34 +28,7 @@
     <script src="/resources/sliceBox/js/modernizr-custom-200320.js"></script> 
 
     <link rel="stylesheet" href="/resources/css/hamburger.css">
-    <script>
-        // hamburger button
-        $(document).ready(function () {
-            $('.hamburger').click(function () {
-                $(this).toggleClass('is-active');
-            });
-        });
-        
-        // year
-        $(document).ready(function() { $('#year').text((new Date).getFullYear())});
-
-        $(function(){
-$('.dropdown').on('show.bs.dropdown', function(e){
-    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-  });
-
-  // ADD SLIDEUP ANIMATION TO DROPDOWN //
-  $('.dropdown').on('hide.bs.dropdown', function(e){
-    e.preventDefault();
-    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(400, function(){
-    	$('.dropdown').removeClass('open');
-      	$('.dropdown').find('.dropdown-toggle').attr('aria-expanded','false');
-    });
-    
-  });
-});
-        
-    </script>
+    <script src="resources/js/jq.js"></script>
 
     <meta name="Description" content="FABRIKA KABLOVA ZAJEČAR D.O.O. je deo multinacionalne kompanije TELE-FONIKA Kable i bavi se proizvodnjom širokog asortimana kablova">
     <meta name="Keywords" content="kabl, cable, fabrika kablova">
@@ -107,7 +80,7 @@ $('.dropdown').on('show.bs.dropdown', function(e){
                             <span></span>
                             <span></span>
                             <i class="fas fa-industry mr-3 mr-md-0 mr-lg-2"></i>
-                            POČETNA
+                            Početna
                         </a>
                     </li>
                     <li class="nav-item px-1 px-lg-2">
@@ -117,7 +90,7 @@ $('.dropdown').on('show.bs.dropdown', function(e){
                             <span></span>
                             <span></span>
                             <i class="fas fa-pencil-alt mr-3 mr-md-0 mr-lg-2"></i>
-                            O&nbsp;NAMA
+                            O&nbsp;Nama
                         </a>
                     </li>
                     <li class="nav-item px-1 px-lg-2">
@@ -127,7 +100,7 @@ $('.dropdown').on('show.bs.dropdown', function(e){
                             <span></span>
                             <span></span>
                             <i class="fas fa-bacon mr-3 mr-md-0 mr-lg-2"></i>
-                            PROIZVODI
+                            Proizvodi
                         </a>
                     </li>
                     <!-- <li class="nav-item px-1 px-lg-2">
@@ -147,23 +120,23 @@ $('.dropdown').on('show.bs.dropdown', function(e){
                             <span></span>
                             <span></span>
                             <i class="fas fa-user mr-3 mr-md-0 mr-lg-2"></i>
-                            SERTIFIKATI
+                            Sertifikati
                         </a>
                         <div class="dropdown-menu">
                             <a href="resources/localization/sr/certificates_potvrde.html" class="dropdown-item">
-                                <i class="fas fa-user-circle mr-3 mr-md-0 mr-lg-2"></i> Potvrde o usaglašenosti
+                               <i class="fas fa-file-alt mr-3 mr-md-0 mr-lg-2"></i> Potvrde o usaglašenosti
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="resources/localization/sr/certificates_ino.html" class="dropdown-item">
-                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> VDE sertifikati
+                                <i class="fas fa-file-alt mr-3 mr-md-0 mr-lg-2"></i> VDE sertifikati
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="resources/localization/sr/certificates_dop.html" class="dropdown-item">
-                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> Protiv-Požarni sertifikati (DoP)
+                                <i class="fas fa-file-alt mr-3 mr-md-0 mr-lg-2"></i> Protiv-Požarni sertifikati (DoP)
                             </a>
                             <div class="dropdown-divider"></div>
                             <a href="resources/localization/sr/certificates_qs.html" class="dropdown-item">
-                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> ISO Sistem kvaliteta
+                                <i class="fas fa-file-alt mr-3 mr-md-0 mr-lg-2"></i> ISO Sistem kvaliteta
                             </a>
                         </div>                   
                     </li>
@@ -174,15 +147,23 @@ $('.dropdown').on('show.bs.dropdown', function(e){
                             <span></span>
                             <span></span>
                             <i class="fas fa-user mr-3 mr-md-0 mr-lg-2"></i>
-                            KONTAKT
+                            Kontakt
                         </a>
                         <div class="dropdown-menu">
-                            <a href="resources/localization/sr/management.html" class="dropdown-item">
-                                <i class="fas fa-user-circle mr-3 mr-md-0 mr-lg-2"></i> UPRAVA
+                            <a href="resources/localization/sr/contact_osobe.html" class="dropdown-item">
+                                <i class="fas fa-user-circle mr-3 mr-md-0 mr-lg-2"></i> Osobe za kontakt
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="resources/localization/sr/employment.html" class="dropdown-item">
-                                <i class="fas fa-cog mr-3 mr-md-0 mr-lg-2"></i> ZAPOSLENJE
+                            <a href="resources/localization/sr/contact_gde.html" class="dropdown-item">
+                                <i class="fas fa-map-marked-alt mr-3 mr-md-0 mr-lg-2"></i> Gde se nalazimo
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="resources/localization/sr/contact_poruka.html" class="dropdown-item">
+                                <i class="fas fa-comment-dots mr-3 mr-md-0 mr-lg-2"></i> Pošaljite poruku
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="resources/localization/sr/contact_ostalo.html" class="dropdown-item">
+                                <i class="fas fa-id-card mr-3 mr-md-0 mr-lg-2"></i> Ostali podaci
                             </a>
                         </div>                   
                     </li>
