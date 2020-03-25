@@ -249,23 +249,26 @@ footer p {
 }
 
 /* products.html */
-
-#products #heading,
-#products a {
+.btn-color-green {
     background-color: var(--green-dark) !important;
-    
 }
 
-#products .card-body {
+#products #heading {
+    background-color: var(--green-dark) !important;
+}
+
+#products .card-body,
+#certificates .card-body {
     background-color: var(--green-light);
 }
 
-#products .btn-outline-orange {
+.btn-outline-orange {
     color: var(--orange-light);
     border-color: var(--orange-light);
 }
 
-#products .btn-outline-orange:hover {
+.btn-outline-orange:hover,
+.btn-outline-orange:focus {
     color: var(--orange-dark);
     border-color: var(--orange-dark);
     box-shadow: 0px 0px 20px var(--orange-light);
@@ -273,7 +276,17 @@ footer p {
 
 /* certificates.html */
 
-#list-provodnici-list, 
-#list-kablovi-list {
+#list-tab > a {
+    background-color: var(--green);
+}
+
+#list-tab .active {
+    border-color: var(--green-dark);
+    text-shadow: 0px 0px 10px var(--orange-dark);
+    /* font-size: 1.25rem; */
+    
+}
+
+#certificates .card-header {
     background-color: var(--green);
 }
