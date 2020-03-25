@@ -290,3 +290,10 @@ footer p {
 #certificates .card-header {
     background-color: var(--green);
 }
+
+@media screen and (max-width: 768px) {
+    .maxWidth {
+        width: 50%;
+    }
+
+}
