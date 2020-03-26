@@ -179,10 +179,14 @@
         </div>
     </navbar>
 
+    <div class="container my-5">
+        <h2 class="text-center mb-5 title">Pronađite nas na karti</h2>
+    </div>
+
     <section id="where" class="my-5">
         <div class="container">
-            <div class="row">
-                <div class="col col-lg-6">
+            <div class="row mb-5 ">
+                <div class="col text-center">
                     <h5 class="mb-3">TF KABLE Fabrika kablova Zaječar D.O.O.</h5>
                     <p class="p-1 m-0">SRBIJA, 19000 Zaječar</p>
                     <p class="p-1 m-0">Negotinski put bb</p>
@@ -190,29 +194,29 @@
                         <i class="fas fa-phone-alt mr-2"></i>
                         <span>+381(0)19 444-321</span>
                     </p>
-                 
-                    <a href="mailto:dariusz.chromy@tfkable.com" class="align-self-start btn btn-outline-dark text-left my-2">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <span>dariusz.chromy@tfkable.com</span> 
-                     </a>	
-								
-							
+                    <br>
+                    <p class="lead border-bottom w-25 mx-auto">GPS koordinate:</p>
+                    <p class="p-1 m-0">43° 55' 29'' N</p>
+                    <p class="p-1 m-0">22° 17' 48'' E</p>
+
                 </div>
-                <div class="col col-lg-6">
-                    <div id="map"></div>
+                
+            </div>
+
+            <div class="row"> 
+                <div class="col-12 mb-5">                   														
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d735635.8121728852!2d21.42752820359896!3d43.926722845123436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47547495112f3271%3A0xd3769f2ce091aa84!2sTF%20Kable%20Fabrika%20kablova%20Zajecar%20d.o.o.!5e0!3m2!1sen!2srs!4v1585245546349!5m2!1sen!2srs" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-12">
+                    <!-- <div id="map"></div> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1585246608670!6m8!1m7!1spmSx_L4NJZ5rDDJQwxpuLg!2m2!1d43.92500636424209!2d22.29655097817249!3f146.23493418318887!4f-2.520229053394175!5f0.7820865974627469" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
+
     </section>
 
-    
-
-    
-
-
-
-
-    
+   
 
     <footer class="bg-dark py-2">
         <div class="container text-center text-muted">
@@ -236,39 +240,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function initMap() {
-          
-            
-            var fkz = {lat: 43.9251531, lng: 22.2943604};
-            // The map
-            var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 10,
-                    center: fkz,
-                    mapTypeId: google.maps.MapTypeId.route
-                });
-
-            var infowindow = new google.maps.InfoWindow();
-
-            var marker = new google.maps.Marker({position: fkz, map: map});
-
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                infowindow.setContent(locations[i][0]);
-                infowindow.open(map, marker);
-                }
-            })(marker, i));
-
-                }
-
-            
-    </script>
-
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK3ECzg9CTYJMvH0lwA83w9Lu8GtLOFiM&callback=initMap"
-    async
-    defer
-    ></script>
+    
 </body>
 </html>

@@ -23,7 +23,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #myCollapse {
         border-top: 2px solid var(--orange-light);
         margin-top: .75rem;
@@ -315,4 +315,10 @@ footer p {
         width: 50%;
     }
     
+}
+
+/* contact_ostalo.html */
+
+#details {
+    min-height: 70vh;
 }
