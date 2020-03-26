@@ -179,7 +179,31 @@
         </div>
     </navbar>
 
-    
+    <section id="where" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-6">
+                    <h5 class="mb-3">TF KABLE Fabrika kablova Zaječar D.O.O.</h5>
+                    <p class="p-1 m-0">SRBIJA, 19000 Zaječar</p>
+                    <p class="p-1 m-0">Negotinski put bb</p>
+                    <p class="p-1 m-0">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span>+381(0)19 444-321</span>
+                    </p>
+                 
+                    <a href="mailto:dariusz.chromy@tfkable.com" class="align-self-start btn btn-outline-dark text-left my-2">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>dariusz.chromy@tfkable.com</span> 
+                     </a>	
+								
+							
+                </div>
+                <div class="col col-lg-6">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
 
@@ -212,5 +236,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function initMap() {
+          
+            
+            var fkz = {lat: 43.9251531, lng: 22.2943604};
+            // The map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 10,
+                    center: fkz,
+                    mapTypeId: google.maps.MapTypeId.route
+                });
+
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker = new google.maps.Marker({position: fkz, map: map});
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+                }
+            })(marker, i));
+
+                }
+
+            
+    </script>
+
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK3ECzg9CTYJMvH0lwA83w9Lu8GtLOFiM&callback=initMap"
+    async
+    defer
+    ></script>
 </body>
 </html>

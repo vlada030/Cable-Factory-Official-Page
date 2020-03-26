@@ -93,3 +93,4 @@ function validateCaptcha() {
   </form>
 </body> */}
 
+// Initialize and add the map
