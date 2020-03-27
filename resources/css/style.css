@@ -322,3 +322,25 @@ footer p {
 #details {
     min-height: 70vh;
 }
+
+
+/* contact_poruka.html */
+
+#message .card-body{
+    background-color: var(--green-dark);
+}
+
+#captcha {
+    width:  100%;
+    height: 5rem;
+    /* background-color: whitesmoke; */
+    /* border: 1px solid whitesmoke; */
+    border-radius: 3px;
+
+}
+
+#captcha canvas {
+    width: 70%;
+    height: auto;
+}
+

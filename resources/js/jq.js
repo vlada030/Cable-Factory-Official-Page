@@ -52,31 +52,42 @@ function createCaptcha() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
   var charsArray =
-  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lengthOtp = 6;
-  var captcha = [];
+  var codeArr = [];
+  var code;
   for (var i = 0; i < lengthOtp; i++) {
     //below code will not allow Repetition of Characters
     var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
-    if (captcha.indexOf(charsArray[index]) == -1)
-      captcha.push(charsArray[index]);
+    if (codeArr.indexOf(charsArray[index]) == -1)
+      codeArr.push(charsArray[index]);
     else i--;
   }
   var canv = document.createElement("canvas");
-  canv.id = "captcha";
+  canv.id = "canv";
   canv.width = 100;
   canv.height = 50;
   var ctx = canv.getContext("2d");
   ctx.font = "25px Georgia";
-  ctx.strokeText(captcha.join(""), 0, 30);
+  ctx.strokeText(codeArr.join(""), 0, 20);
   //storing captcha so that can validate you can save it somewhere else according to your specific requirements
-  code = captcha.join("");
+  code = codeArr.join("");
   document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
 }
+// function validateCaptcha() {
+//   event.preventDefault();
+//   debugger
+//   if (document.getElementById("code").value == code) {
+//     alert("Valid Captcha")
+//   }else{
+//     alert("Invalid Captcha. try Again");
+//     createCaptcha();
+//   }
+// }
+
 function validateCaptcha() {
-  event.preventDefault();
-  debugger
-  if (document.getElementById("cpatchaTextBox").value == code) {
+  
+  if (document.getElementById("code").value == code) {
     alert("Valid Captcha")
   }else{
     alert("Invalid Captcha. try Again");
@@ -88,9 +99,8 @@ function validateCaptcha() {
   <form onsubmit="validateCaptcha()">
     <div id="captcha">
     </div>
-    <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+    <input type="text" placeholder="Captcha" id="code"/>
     <button type="submit">Submit</button>
   </form>
 </body> */}
 
-// Initialize and add the map
