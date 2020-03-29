@@ -61,7 +61,7 @@
             </div>
         </div>
     </header>
-    <navbar class="navbar navbar-expand-md navbar-dark bg-dark">
+    <navbar class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
             <a href="index.html" class="navbar-brand mr-auto d-md-none">
                 <img src="resources//img/TFKable.png" class="lang-icon" alt="TFKable">
@@ -203,65 +203,48 @@
                         <a href="#">
                             <img src="resources/img/1.jpg" alt="image1">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Creative Lifesaver</h3>
-						</div> -->
-					
+						
 					<li>
 						<a href="#">
                             <img src="resources/img/2.jpg" alt="image2">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Honest Entertainer</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/3.jpg" alt="image3">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Brave Astronaut</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/4.jpg" alt="image4">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Affectionate Decision Maker</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/5.jpg" alt="image5">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Faithful Investor</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/6.jpg" alt="image6">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Groundbreaking Artist</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/7.jpg" alt="image7">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Selfless Philantropist</h3>
-						</div> -->
+						
 					</li>
 					<li>
 						<a href="#">
                             <img src="resources/img/8.jpg" alt="image8">
                         </a>
-						<!-- <div class="sb-description">
-							<h3>Selfless Philantropist</h3>
-						</div> -->
+						
 					</li>
 				</ul>
 
@@ -429,44 +412,141 @@
 
     <script>
         // Initialize and add the map
-        function nitMap() {
-        // The list of locations
-        var locations = [
-            ['Factory Bidgoczsz', 53.1233142, 18.0724926],
-            ['Factory Chernihiv', 51.5386445, 31.2699078],
-            ['Factory Krakow - Biezanov', 50.4323979, 20.0577319],
-            ['Factory Krakow - Wielicka', 50.0282322, 19.9755294],
-            ['Factory Myslenice', 49.837495, 19.9562113],
-            ['TF Kable Fabrika Kablova Zaječar', 43.9244147, 22.295228],
-            ['Zakład Recyklingu Bukowno', 50.2707544, 19.4412953]
-        ];
-        
-        // The map
-        var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 5,
-                center: new google.maps.LatLng(48.672268, 24.717828),
-                mapTypeId: google.maps.MapTypeId.terrain
-            });
-        
-        var infowindow = new google.maps.InfoWindow();
+        function initMap() {
+            // The list of locations
+            var bidg = `    <div>Factory Bydgoszcz</div>
+                            <div class="address">
+                                <p> 
+                                    ul. Fordońska 152<br>
+                                    85-957 Bydgoszcz<br>
+                                </p>
+                                <p> 
+                                    tel.: (+48) 52 364 3210<br>
+                                    fax: (+48) 52 342 1841
+                                </p>
 
-        var marker, i;
+                            </div>`;
 
-        for (i = 0; i < locations.length; i++) {  
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map
-        });
+            var cher = `    <div>Factory Chernihiv</div>
+                            <div class="address">
+                                <p> 
+                                    TOW „TF KABEL UKRAINA”<br>
+                                    3 Kiltseva St.<br>
+                                    14007 Chernihiv - Ukraine<br>
+                                </p>
+                                <p> 
+                                    T: (+38) 0 462 679 597<br>
+                                    F: (+38) 0 462 679 597<br>
+                                    office@tfkabel.com.ua
+                                </p>
+                            </div>`;
 
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-            infowindow.setContent(locations[i][0]);
-            infowindow.open(map, marker);
+            var biez = `    <div>Factory Krakow-Biezanow</div>
+                            <div class="address">
+                                <p> 
+                                    ul. Nad Drwiną 20<br>
+                                    30-741 Kraków<br>
+                                </p>
+                                <p> 
+                                    T: (12) 651 41 52<br>
+                                    F: (12) 651 42 44
+                                </p>
+                            </div>`;
+
+            var wiel = `    <div>Factory Krakow-Wielicka</div>
+                            <div class="address">
+                                <p> 
+                                    ul. Wielicka 114<br>
+                                    30-663 Kraków<br>
+                                </p>
+                                <p> 
+                                    tel.: +48 12 652 50 00<br>
+                                    fax: +48 12 652 51 56
+                                </p>
+                            </div>`;
+
+            var mysl = `    <div>Factory Myślenice</div>
+                            <div class="address">
+                                <p> 
+                                    32-400 Myślenice<br>
+                                    ul. H. Cegielskiego 1<br>
+                                </p>
+                                <p> 
+                                    tel.: +48 12 372 74 05<br>
+                                    fax: +48 12 372 73 49
+                                </p>
+                            </div>`;
+
+            var zaj = `    <div>Factory Zajecar</div>
+                            <div class="address">
+                                <p> 
+                                    TF KABLE FABRIKA KABLOVA ZAJECAR<br>
+                                    Negotinski put b.b.<br>
+                                    19000 Zaječar - Serbia<br>
+                                </p>
+                                <p> 
+                                    T: (+381) 0 19 444-333<br>
+                                </p>
+                            </div>`;
+
+            var buko = `    <div>Cable Wastes Recycling Plant in Bukowno</div>
+                            <div class="address">
+                                <p> 
+                                    Zakład Recyklingu Bukowno<br>
+                                    ul. Eugeniusza Puza 1<br>
+                                    32-332 Bukowno<br>
+                                </p>
+                                <p> 
+                                    Tel. 032 64-22-490<br>
+                                </p>
+                            </div>`;
+                                                   
+            
+            var locations = [
+                ['Factory Bidgoczsz', 53.1233142, 18.0724926, 'resources/img/poland.png', bidg],
+                ['Factory Chernihiv', 51.9386445, 31.2699078, 'resources/img/ukraine.png', cher],
+                ['Factory Krakow - Biezanov', 50.4323979, 20.5577319, 'resources/img/poland.png', biez],
+                ['Factory Krakow - Wielicka', 50.0282322, 18.5755294, 'resources/img/poland.png', wiel],
+                ['Factory Myslenice', 49.237495, 19.9562113, 'resources/img/poland.png', mysl],
+                ['TF Kable Fabrika Kablova Zaječar', 43.9244147, 22.295228, 'resources/img/serbia.png', zaj],
+                ['Zakład Recyklingu Bukowno', 50.2707544, 19.0412953, 'resources/img/poland.png', buko]
+            ];
+            // var locations = [
+            //     ['Factory Bidgoczsz', 53.1233142, 18.0724926, 'resources/img/poland.png'],
+            //     ['Factory Chernihiv', 51.5386445, 31.2699078, 'resources/img/ukraine.png'],
+            //     ['Factory Krakow - Biezanov', 50.4323979, 20.0577319, 'resources/img/poland.png'],
+            //     ['Factory Krakow - Wielicka', 50.0282322, 19.9755294, 'resources/img/poland.png'],
+            //     ['Factory Myslenice', 49.837495, 19.9562113, 'resources/img/poland.png'],
+            //     ['TF Kable Fabrika Kablova Zaječar', 43.9244147, 22.295228, 'resources/img/serbia.png'],
+            //     ['Zakład Recyklingu Bukowno', 50.2707544, 19.4412953, 'resources/img/poland.png']
+            // ];
+            
+            // The map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 5,
+                    center: new google.maps.LatLng(48.672268, 24.717828),
+                    mapTypeId: google.maps.MapTypeId.terrain
+                });
+            
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker, i;
+
+            for (i = 0; i < locations.length; i++) {  
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: locations[i][3]
+            });                                   ;
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                infowindow.setContent(locations[i][4]);
+                infowindow.open(map, marker);
+                }
+            })(marker, i));
+
             }
-        })(marker, i));
-
-            }
-
         }
     </script>
         

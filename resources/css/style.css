@@ -1,7 +1,8 @@
 :root {
     --green-light: #a3dfc8;
-    --green: #66caa3;
+    --green: rgb(102, 202, 163);
     --green-dark: rgb(0, 105, 64);
+    --green-bg: rgb(188, 232, 215);
 
     --orange-light: #ffc888;
     --orange: #ffa944;
@@ -16,12 +17,17 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Raleway', sans-serif;
 
+    /* color:  rgba(255, 255, 255, 0.5); */
+    color: var(--green-dark);
+    color: rgba(0, 0, 0, .9);
+    background: linear-gradient(to bottom, rgba(102, 202, 168, .9), rgba(102, 202, 168, .9)), url(../img/1.jpg);
+    background: linear-gradient(to bottom, rgba(194, 255, 158, .9), rgba(194, 255, 158, .9)), url(../img/1.jpg);
+    background: linear-gradient(to bottom, rgba(188, 232, 215, .9), rgba(188, 232, 215, .9)), url(../img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
-    color:  rgba(255, 255, 255, 0.5);
-    /* color: var(--green-dark)!important; */
-    background-color: rgba(0, 105, 64, .6)!important; 
 }
-
 
 @media screen and (max-width: 767px) {
     #myCollapse {
@@ -31,18 +37,13 @@ body {
     }
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px var(--orange), 6px 6px 20px var(--green-dark);
+header {
+    background-color: var(--green);
 }
 
-@media screen and (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-
-    }
+.navbar {
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--orange-dark);
 }
 
 .logo-1 {
@@ -63,12 +64,30 @@ body {
     box-shadow: 0 0 .2rem .25rem var(--orange-dark)
 }
 
+.title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px var(--orange), 6px 6px 20px var(--green-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+
+    }
+}
+
+footer {
+border-top: 2px solid var(--orange-dark);
+}
 footer p {
     font-size: .8rem;
 }
 
 .link-format {
-    color: var(--orange-light);
+    color: var(--green-dark);
+    text-decoration: underline;
     transition: .2s;
 }
 
@@ -253,6 +272,14 @@ footer p {
 .btn-color-green {
     background-color: var(--green-dark) !important;
 }
+#description .list-group > * {
+    transition: .2s;
+}
+
+#description .list-group > *:hover {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+}
 
 #products #heading {
     background-color: var(--green-dark) !important;
@@ -344,3 +371,13 @@ footer p {
     height: auto;
 }
 
+.form-control:focus {
+    border: 3px solid var(--orange) !important;
+    box-shadow: none;
+}
+
+/* remove valid/invalid image from the input element */
+.was-validated .form-control:invalid:nth-child(3),
+.was-validated .form-control:valid:nth-child(3){
+    background-image: none;
+}

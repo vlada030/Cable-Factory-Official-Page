@@ -59,7 +59,7 @@
         </div>
     </header>
 
-    <navbar class="navbar navbar-expand-md navbar-dark bg-dark">
+    <navbar class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
             <a href="../../../index.html" class="navbar-brand mr-auto d-md-none">
                 <img src="../../img/TFKable.png" class="lang-icon" alt="TFKable">
@@ -191,36 +191,36 @@
                     <div class="col-md-8 mx-auto">
                         <div class="card mb-5">
                             <div class="card-body text-center">
-                                <div class="form-group row text-left mr-lg-1">
+                                <div class="form-group row text-left mx-1">
                                     <label for="name" class="col-lg-3">Vaše ime *</label>
-                                    <input type="text" class="form-control col-lg-9" id="name" required>
+                                    <input type="text" class="form-control col-lg-9" id="name" name="name" required autofocus>
                                     <div class="invalid-feedback text-right mr-4">Molimo, unesite Vaše ime.</div>
                                     <div class="valid-feedback text-right mr-4">Ime je ispravno.</div>
                                 </div>
-                                <div class="form-group row text-left mr-lg-1">
+                                <div class="form-group row text-left mx-1">
                                     <label for="email" class="col-lg-3">Vaš e-mail *</label>
-                                    <input type="text" class="form-control col-lg-9" for="email" required>    
+                                    <input type="email" class="form-control col-lg-9" for="email" name="email" required>    
                                     <div class="invalid-feedback text-right mr-4">Molimo, unesite Vaš e-mail.</div>
                                     <div class="valid-feedback text-right mr-4">E-mail je ispravan.</div>
                                 </div>
-                                <div class="form-group row text-left mr-lg-1">
+                                <div class="form-group row text-left mx-1">
                                     <label for="message" class="col-lg-3">Vaša poruka *</label>
-                                    <textarea class="form-control col-lg-9" id="message" cols="30" rows="5" required></textarea>
+                                    <textarea class="form-control col-lg-9" id="message" name="message" cols="30" rows="5" required></textarea>
                                     <div class=" invalid-feedback text-right mr-4">Molimo, unesite Vašu poruku</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
+                                    <div class="valid-feedback text-right mr-4">Poruka je ispravna.</div>
                                 </div>
 
-                                <div class="form-group row text-left mr-lg-1">
+                                <div class="form-group row text-left mx-1">
                                     <label for="message" class="col-lg-3">Unesite kod *</label> 
                                     <div id="captcha" class="col-lg-5 mb-1">
 
                                     </div>                                 
-                                    <input type="text" class="form-control col-lg-4 mt-4 mt-lg-0" placeholder= "Unesi kod" id="code" required>  
-                                    <div class="invalid-feedback text-right mr-4">Molimo, unesite ispravan kod sa slike.</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
+                                    <input type="text" class="form-control col-lg-4 my-4 mt-lg-0" placeholder= "Vaš kod" id="code">  
+                                    <div id="wrongCaptcha" class="invalid-feedback text-right mr-4">Molimo, unesite ispravan kod sa slike.</div>
+                                    <div id="okCaptcha" class="valid-feedback text-right mr-4">Kod je ispravan.</div>
                                 </div>
 
-                                <button type="submit" class="btn btn-outline-light w-100 w-md-25 mb-3">Pošalji</button>
+                                <button type="submit" class="btn btn-outline-light w-50 mb-3">Pošalji</button>
                                 
                                 <p class="">Polja obeležena zvezdicom <strong>*</strong> su obavezna za unos.</p>
                             </div>
@@ -231,96 +231,7 @@
             
         </div>
     </section>
-    <!-- <section id="message">
-        <div class="container">
-            <form action="#" id="form" class="needs-validation" novalidate>
-
-                        
-                            <div class="card-body text-center">
-                                <div class="form-group row text-left">
-                                    <label for="name" class="">Vaše ime *</label>
-                                   
-                                    <input type="text" class="form-control" id="name" required>
-                                
-                                    <div class="invalid-feedback text-right mr-4">Molimo, unesite Vaše ime.</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
-                                </div>
-                                <div class="form-group text-left">
-                                    <label for="email" class="col-lg-3">Vaš e-mail *</label>
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" for="email" required>
-                                    </div>
-                                    <div class="invalid-feedback text-right mr-4">Molimo, unesite Vaš e-mail.</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
-                                </div>
-                                <div class="form-group row text-left">
-                                    <label for="message" class="col-lg-3">Vaša poruka *</label>
-                                    
-                                        <textarea class="form-control col-lg-9" id="message" cols="30" rows="5" required></textarea>
-                                   
-                                    <div class=" invalid-feedback text-right mr-4">Molimo, unesite Vašu poruku</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
-                                </div>
-
-                                <div class="form-group row text-left">
-                                    <label for="message" class="col-lg-3">Unesite kod *</label>
-                                    <div class="col-lg-5 mb-1">
-                                        <div id="captcha"></div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <input type="text" class="form-control" placeholder= "Unesi kod" id="code" required>
-                                    </div>
-                                    <div class="invalid-feedback text-right mr-4">Molimo, unesite ispravan kod sa slike.</div>
-                                    <div class="valid-feedback text-right mr-4">Kod je ispravan.</div>
-                                </div>
-
-                                <button type="submit" class="btn btn-outline-light w-100 w-md-25 mb-3">Pošalji</button>
-                                
-                                <p class="">Polja obeležena zvezdicom <strong>*</strong> su obavezna za unos.</p>
-                            </div>
-
-              
-            </form>
-            <form novalidate id="myForm" class="needs-validation" action="#">
-                <div class="form-group">
-                    <label class="form-control-label" for="inputSuccess1">Enter some input</label>
-                    <input type="text" class="form-control" name="i1" id="inputSuccess1" required>
-                    <div class="valid-feedback">Success! You've done it.</div>
-                    <div class="invalid-feedback">No, you missed this one.</div>
-                </div>
-                <div class="form-group">
-                    <label class="form-control-label" for="inputSuccess2">Enter some input</label>
-                    <input type="text" class="form-control" name="i2" required id="inputSuccess2">
-                    <div class="valid-feedback">Nice! You got this one!</div>
-                    <div class="invalid-feedback">Sorry, you missed this one.</div>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-secondary" id="btnSubmit">Try It!</button>
-                </div>
-            </form>
-            <hr>
-            
-            
-        </div>
-    </section> -->
-
-    <form class="container" class="needs-validation" novalidate id="myForm">
-        <div class="form-group">
-            <label class="form-control-label" for="inputSuccess1">Enter some input</label>
-            <input type="text" class="form-control" name="i1" id="inputSuccess1" required>
-            <div class="valid-feedback">Success! You've done it.</div>
-            <div class="invalid-feedback">No, you missed this one.</div>
-        </div>
-        <div class="form-group">
-            <label class="form-control-label" for="inputSuccess2">Enter some input</label>
-            <input type="text" class="form-control" name="i2" required id="inputSuccess2">
-            <div class="valid-feedback">Nice! You got this one!</div>
-            <div class="invalid-feedback">Sorry, you missed this one.</div>
-        </div>
-        <div>
-            <button type="submit" class="btn btn-secondary" id="btnSubmit">Try It!</button>
-        </div>
-    </form>
+    
 
     <footer class="bg-dark py-2">
         <div class="container text-center text-muted">
@@ -344,24 +255,58 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
+    //     // CUSTOM SCRIPT IF PAGE CONTAINS MORE THAN ONE FORM
+    //     window.addEventListener('load', function() {
+    //         createCaptcha();
+    //         var forms = document.getElementsByClassName('needs-validation');
+    // // Loop over them and prevent submission
+    //         var validation = Array.prototype.filter.call(forms, function(form) {
+    //             form.addEventListener('submit', function(event) {
+    //                 if (form.checkValidity() === false) {
+    //                 event.preventDefault();
+    //                 event.stopPropagation();
+    //                 }
+    //                 form.classList.add('was-validated');
+    //             }, false);
+    //             });
+    //     }, false);
+    // CUSTOM SCRIPT FOR ONLY ONE FORM ON THE PAGE
         window.addEventListener('load', function() {
             createCaptcha();
-            var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-                });
-        }, false);
-        
-        document.getElementById('form').addEventListener('onsubmit', validateCaptcha);
+            document.querySelectorAll('.form-control').forEach(el => el.value = '');
+
+            var form = document.getElementsByClassName('needs-validation')[0];
+
+            document.getElementById('okCaptcha').style.display = 'none';
+            document.getElementById('wrongCaptcha').style.display = 'none';
+
+            form.addEventListener('submit', function(e) {
+                if (form.checkValidity() === false || validateCaptcha() === false) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    // alert("zaustavljeno slanje");
+                }
+                
+
+                if (validateCaptcha()) {
+                    document.getElementById('okCaptcha').style.display = 'block';
+                    document.getElementById('wrongCaptcha').style.display = 'none';
+                    
+                    // document.getElementById('code').classList.add('is-valid');
+                } else {
+                    document.getElementById('code').value = '';
+                    document.getElementById('wrongCaptcha').style.display = 'block';
+                    document.getElementById('okCaptcha').style.display = 'none';
+                   
+                    // document.getElementById('code').classList.add('is-invalid');
+                }
+
+                form.classList.add('was-validated');
+            })
+        })
     </script>
+    
 </body>
 </html>
