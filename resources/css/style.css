@@ -82,6 +82,7 @@ header {
 footer {
 border-top: 2px solid var(--orange-dark);
 }
+
 footer p {
     font-size: .8rem;
 }
@@ -96,6 +97,40 @@ footer p {
     text-decoration: none;
     color: var(--orange-dark);
 }
+
+.image-products {
+    height: 17rem;
+    border-radius: 3px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, .4);
+    background: url(../img/pogon-2.JPG);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.image-history {
+    height: 17rem;
+    border-radius: 3px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, .4);
+    background: url(../img/pogon-6.JPG);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.image-other {
+    height: 21rem;
+    border-radius: 3px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, .4);
+    background: url(../img/pogon-3.JPG);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
 
 /* proba */
 
@@ -279,8 +314,9 @@ footer p {
 }
 
 #description .list-group > *:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important;
     font-size: 1.1rem;
+    background-color: rgba(102, 202, 168, .9) !important;
 }
 
 #products #heading {
@@ -348,9 +384,9 @@ footer p {
 
 /* contact_ostalo.html */
 
-#details {
+/* #details {
     min-height: 70vh;
-}
+} */
 
 /* contact_gde.html */
 
