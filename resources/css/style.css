@@ -47,6 +47,10 @@ header {
     border-bottom: 2px solid var(--orange-dark);
 }
 
+.navbar .dropdown-item:active {
+    background-color: var(--green);
+}
+
 .logo-1 {
     height: 4rem;
 }

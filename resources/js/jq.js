@@ -8,6 +8,14 @@ $(document).ready(function () {
 // year
 $(document).ready(function() { $('#year').text((new Date).getFullYear())});
 
+// remove class at 768px in order to disable navbar hover on touch devices
+$(document).ready(function() {
+  if ($(window).width()<768) {
+    $('.hover-effect').removeClass('hover-effect');
+  }
+});
+
+
 // smooth dropdown
 $(document).ready(function() {
     $('.dropdown').on('show.bs.dropdown', function(e){
